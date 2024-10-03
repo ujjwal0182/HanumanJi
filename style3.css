@@ -1,0 +1,272 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Static Toolbar */
+header {
+    background-color: #ff9933; /* Saffron color */
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #fff4e6;
+    border-bottom: 2px solid #fff4e6; /* Hover underline effect */
+}
+
+/* Add spacing below header */
+body {
+    padding-top: 70px;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #ff9933;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    background-image: linear-gradient(45deg, #ff9933, #ffcc66); /* Saffron Gradient */
+    animation: fadeIn 1s ease-in-out; /* Animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin: 0;
+    line-height: 1.2;
+    animation: slideDown 1s ease-in-out; /* Text animation */
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #cc6600;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #b35900;
+    transform: translateY(-5px); /* Button hover lift effect */
+}
+
+/* Content Sections */
+.content {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.content h2 {
+    color: #cc6600; /* Dark Saffron */
+    font-size: 36px;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out; /* Fade-in effect */
+}
+
+.content p, pre {
+    max-width: 700px;
+    margin: 20px auto;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left;
+    white-space: pre-wrap; /* Preserve line breaks */
+}
+
+.content p.icon {
+    font-size: 100px; /* Icon size */
+    margin-bottom: 20px;
+    color: #ff9933;
+}
+
+/* Icons Section (optional) */
+.icon {
+    font-size: 100px;
+    margin-bottom: 20px;
+    color: #ff9933;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 14px;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .social-icons {
+    margin: 10px 0;
+}
+
+footer .social-icons a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+footer .social-icons a:hover {
+    color: #ffcc66; /* Saffron hover color */
+}
+
+/* ========== Responsive Design (Media Queries) ========== */
+/* Mobile Devices (max-width: 600px) */
+@media (max-width: 600px) {
+
+    /* Header */
+    header {
+        padding: 10px 0;
+    }
+    nav ul {
+        flex-direction: column;
+        display: none; /* Hide menu by default */
+        position: absolute;
+        background-color: #ff9933;
+        width: 100%;
+        top: 60px;
+        left: 0;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    /* Hamburger menu for mobile */
+    .menu-icon {
+        display: block;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+        text-align: center;
+        margin-top: -10px;
+    }
+
+    .show-menu {
+        display: flex;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+    }
+
+    /* Content Section */
+    .content h2 {
+        font-size: 28px;
+    }
+
+    .content p, pre {
+        font-size: 16px;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 12px;
+    }
+}
+
+/* Tablets (max-width: 900px) */
+@media (max-width: 900px) {
+
+    /* Hero Section */
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+    }
+
+    /* Content Section */
+    .content h2 {
+        font-size: 32px;
+    }
+
+    .content p, pre {
+        font-size: 16px;
+    }
+}
