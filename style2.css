@@ -270,3 +270,36 @@ footer .social-icons a:hover {
         font-size: 16px;
     }
 }
+
+/* Hide the menu icon by default */
+.menu-icon {
+    display: none;
+}
+
+/* Show the menu icon for smaller screens (less than 600px) */
+@media (max-width: 600px) {
+    .menu-icon {
+        display: block;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+        text-align: center;
+        margin-top: -10px;
+    }
+
+    /* Hide the navigation links by default on small screens */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #ff9933; /* Saffron color */
+        width: 100%;
+        top: 60px;
+        left: 0;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+}
+
