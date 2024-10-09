@@ -6,10 +6,6 @@ function toggleMenu() {
 
 
  // Typewriter Effect
-
-
-
-
     const text = "जय श्री हनुमान"; // The text you want to display
     let index = 0;
     const speed = 200; // Speed in milliseconds for typing each character
