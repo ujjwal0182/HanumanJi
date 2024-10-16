@@ -9,6 +9,53 @@
     <link rel="stylesheet" href="style2.css">
     <script src="header.js"></script>
     <script src="javascript.js"></script>
+    <style>
+        /* Disable text selection */
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none;    /* Firefox */
+            -ms-user-select: none;     /* Internet Explorer/Edge */
+            user-select: none;         /* Standard syntax */
+        }
+        
+        /* Background Image Styles */
+
+        body {
+            background: linear-gradient(to bottom, rgba(255, 136, 0, 0.8), rgba(255, 94, 0, 0.8)), 
+            url('./images/hanuman-image.png') no-repeat center center fixed;
+            background-size: cover; /* Cover the entire body */
+
+        }
+
+        /* Content Section Styles */
+        #chalisa {
+        padding: 20px;
+        color: white; /* Change text color for readability */
+        text-align: center;
+        }
+
+
+        /* Optional styling for the <pre> text */
+        pre {
+        background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for better readability */
+        border: 2px solid red;
+        padding: 10px;
+        border-radius: 5px; /* Rounded corners */
+        color: black; /* Text color for the preformatted text */
+        white-space: pre-wrap; /* To ensure text wraps properly */
+        overflow-wrap: break-word; /* Break long words to avoid overflow */
+        }
+
+        /* Footer Styles */
+
+        footer {
+        text-align: center;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent footer */
+        color: white; /* Footer text color */
+        position: relative; /* Ensure it stays below the content */
+        }
+    </style>
 </head>
 <body>
 
@@ -18,9 +65,9 @@
 
     <!-- Content Section for Hanuman Chalisa -->
     <section id="chalisa" class="content">
-        <p class="icon"><i class="fas fa-praying-hands"></i></p> <!-- Icon -->
-        <h2>श्री हनुमान चालीसा</h2>
-        <pre style="border: 2px solid red; padding: 10px;">
+        <p class="icon" style="color: white;"><i class="fas fa-praying-hands"></i></p> <!-- Icon -->
+        <h2 style="color: white;">श्री हनुमान चालीसा</h2>
+        <pre>
 श्री हनुमान चालीसा
 
 ॥दोहा॥
@@ -167,6 +214,23 @@
         window.onload = function() {
             loadHeader()
         };
+
+            // Disable right-click
+            document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        // Disable keyboard shortcuts for copying
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && (e.key === 'c' || e.key === 'x')) {
+                e.preventDefault();
+            }
+        });
+
+        // Disable drag and drop
+        document.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+        });
     </script>
 </body>
 </html>

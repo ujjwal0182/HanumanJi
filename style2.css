@@ -63,21 +63,41 @@ body {
 
 /* Hero Section */
 .hero {
-    background-color: #ff9933;
-    color: white;
+    background: linear-gradient(135deg, #ffb347, #ffcc33); /* Vibrant gradient */
+    padding: 80px; /* Increase padding for breathing space */
     text-align: center;
-    padding: 100px 20px;
-    background-image: linear-gradient(45deg, #ff9933, #ffcc66); /* Saffron Gradient */
-    animation: fadeIn 1s ease-in-out; /* Animation */
+    color: white;
+    font-family: 'Montserrat', sans-serif; /* Stylish font from Google Fonts */
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    border-radius: 10px; /* Slightly round the edges */
+    margin: 20px auto;
+    width: 80%; /* Centered and responsive width */
+    transition: transform 0.3s ease; /* Animation for hover */
 }
 
+/* Text animation on hover */
+.hero:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Text animation on page load (fade-in) */
 @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* @keyframes fadeIn {
     from {
         opacity: 0;
     }
     to {
         opacity: 1;
     }
+} */
+.hero {
+    animation: fadeIn 1s ease-in-out;
 }
 
 .hero-text h1 {
@@ -337,6 +357,35 @@ nav ul li a {
 @media (max-width: 400px) {
     nav ul li a {
         font-size: 12px; /* Even smaller for very small screens */
+    }
+}
+
+
+/* Image CSS*/
+.hanuman-background {
+    background: linear-gradient(to bottom, rgba(255, 136, 0, 0.8), rgba(255, 94, 0, 0.8)), 
+                url('./images/hanuman-image.png'); /* Adds the image and a gradient overlay */
+    background-size: cover; /* Ensures the background covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    height: 500px; /* Adjust this as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; /* Text color to contrast with the background */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Adds a slight shadow for depth */
+}
+
+/* Optional: Ensure responsiveness */
+@media (max-width: 768px) {
+    .hanuman-background {
+        font-size: 24px; /* Smaller font for mobile devices */
+        height: 350px; /* Adjust height for smaller screens */
     }
 }
 
